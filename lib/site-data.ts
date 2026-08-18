@@ -3,7 +3,7 @@ export const BUSINESS = {
   phone: '(04) 6846 0438',
   phoneHref: 'tel: +610468460438',
   email: 'a1removalsadelaide@gmail.com',
-  abn: 'ABN ## ### ### ###',
+  abn: 'ABN 64 681 272 882',
   hours: '24/7 Available',
 }
 
