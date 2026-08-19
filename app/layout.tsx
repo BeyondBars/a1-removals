@@ -20,7 +20,10 @@ export const metadata: Metadata = {
   title: 'A1 Removals Adelaide | Trusted Local Removalists',
   description:
     'Adelaide\'s trusted packing and moving experts. Insured, licensed and local. Residential, office and interstate moves. Get a free quote today.',
-  generator: 'v0.app',
+  icons: {
+    icon: '/icon.svg',
+  },
+  generator: 'joriverse',
   keywords: [
     'Adelaide movers',
     'Adelaide removalists',
