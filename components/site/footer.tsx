@@ -40,10 +40,10 @@ export function Footer() {
             and interstate genuinely stress-free.
           </p>
           <div className="mt-5 flex gap-3">
-            <a href="#" aria-label="Facebook" className="flex size-9 items-center justify-center rounded-md bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground">
+            <a href="https://www.facebook.com/p/A1-Removals-Adelaide-61561548832002/" target='_blank' aria-label="Facebook" className="flex size-9 items-center justify-center rounded-md bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground">
               <FacebookIcon className="size-4" />
             </a>
-            <a href="#" aria-label="Instagram" className="flex size-9 items-center justify-center rounded-md bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground">
+            <a href="https://www.instagram.com/a1removals_adelaide/" target='_blank' aria-label="Instagram" className="flex size-9 items-center justify-center rounded-md bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground">
               <InstagramIcon className="size-4" />
             </a>
           </div>
