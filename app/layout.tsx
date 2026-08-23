@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     'furniture removal Adelaide',
     'interstate movers South Australia',
   ],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   openGraph: {
     title: 'A1 Removals Adelaide | Trusted Local Removalists',
     description:
