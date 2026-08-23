@@ -1,7 +1,40 @@
+'use client'
+
 import { Quote, Star } from 'lucide-react'
 import { TESTIMONIALS } from '@/lib/site-data'
+import { useState, useEffect } from 'react'
+
+interface Review {
+  author_name: string;
+  rating: number;
+  text: string;
+  relative_time_description: string;
+  profile_photo_url: string;
+}
+
+interface ReviewsData {
+  rating: number;
+  totalReviews: number;
+  reviews: Review[];
+}
 
 export function Testimonials() {
+  const [reviews, setReviews] = useState([])
+  const [data, setData] = useState<ReviewsData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/google-reviews")
+      .then((res) => res.json())
+      .then((data) => setData(data))
+      .finally(() => setLoading(false));
+  }, []);
+  console.log('Reviews data:', data);
+
+  if (loading) return <p>Loading reviews...</p>;
+  // if (!data || !data.reviews.length) return <p>No reviews available.</p>;
+
+
   return (
     <section id="reviews" className="scroll-mt-20 py-16 lg:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">

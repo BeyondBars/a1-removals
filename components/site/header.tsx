@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Menu, Phone, Truck, X } from 'lucide-react'
 import { BUSINESS, NAV_LINKS } from '@/lib/site-data'
+import Image from 'next/image'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -11,14 +12,18 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-2.5" aria-label={`${BUSINESS.name} home`}>
-          <span className="flex size-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <Truck className="size-5" aria-hidden="true" />
-          </span>
+          <Image
+            src="/logo.png"
+            alt="Two professional movers in navy uniforms loading a wrapped sofa into a moving truck on an Adelaide street"
+            width={50}
+            height={40}
+            priority
+          />
           <span className="font-heading text-base font-extrabold leading-none tracking-tight text-primary">
-            Adelaide
             <span className="block text-[0.7rem] font-semibold tracking-wide text-muted-foreground">
-              Packers &amp; Movers
+              A1 Removals
             </span>
+            Adelaide
           </span>
         </a>
 
@@ -44,7 +49,7 @@ export function Header() {
           </a>
           <a
             href="#quote"
-            className="hidden rounded-md bg-accent px-4 py-2.5 text-sm font-bold text-accent-foreground transition-transform hover:scale-[1.02] sm:inline-flex"
+            className="hidden rounded-md bg-accent px-4 py-2.5 text-sm text-accent-foreground transition-transform hover:scale-[1.02] sm:inline-flex"
           >
             Request a Quote
           </a>

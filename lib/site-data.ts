@@ -1,6 +1,6 @@
 export const BUSINESS = {
   name: 'A1 Removals Adelaide',
-  phone: '(04) 6846 0438',
+  phone: '04 6846 0438',
   phoneHref: 'tel: +610468460438',
   email: 'a1removalsadelaide@gmail.com',
   abn: 'ABN 64 681 272 882',
