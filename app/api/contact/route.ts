@@ -77,7 +77,7 @@ export async function POST(request: Request) {
     })
   } catch (error) {
     console.error('Quote request error:', error)
-
+    console.log(process.env, 'env')
     return Response.json(
       {
         message: 'Unable to send quote request.',
