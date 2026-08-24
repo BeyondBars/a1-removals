@@ -21,7 +21,7 @@ export async function sendEmail({
   if (!process.env.RESEND_API_KEY) {
     throw new Error('RESEND_API_KEY is not configured')
   }
-
+  console.log('process.env.EMAIL_FROM', process.env.EMAIL_FROM, process.env)
   if (!process.env.EMAIL_FROM) {
     throw new Error('EMAIL_FROM is missing')
   }
