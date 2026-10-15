@@ -21,6 +21,10 @@ export async function sendEmail({
   if (!process.env.RESEND_API_KEY) {
     throw new Error('RESEND_API_KEY is not configured')
   }
+  console.log('process.env.EMAIL_FROM', process.env.EMAIL_FROM, process.env)
+  if (!process.env.EMAIL_FROM) {
+    throw new Error('EMAIL_FROM is missing')
+  }
 
   const { data, error } = await resend.emails.send({
     from: from ?? process.env.EMAIL_FROM ?? 'Website <onboarding@resend.dev>',
@@ -32,7 +36,9 @@ export async function sendEmail({
 
   if (error) {
     console.error('Failed to send email:', error)
-    throw new Error(error.message)
+    throw new Error(
+      `${error.name}: ${error.message}`
+    )
   }
 
   return data
